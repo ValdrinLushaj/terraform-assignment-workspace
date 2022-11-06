@@ -24,20 +24,41 @@ module "valdrin-module" {
       #     Effect   = "Allow"
       #     Resource = "*"
       #   },
-      {
-        Action = [
-          "iam:ChangePassword"
-        ]
-        Effect   = "Allow"
-        Resource = "*"
-      },
-      {
-        Action = [
-          "s3:"
-        ]
-        Effect   = "Allow"
-        Resource = "*"
-      },
+      #   {
+      #     Action = [
+      #       "iam:ChangePassword"
+      #     ]
+      #     Effect   = "Allow"
+      #     Resource = "*"
+      #   },
+      #   {
+      #     Action = [
+      #       "s3:"
+      #     ]
+      #     Effect   = "Allow"
+      #     Resource = "*"
+      #   },
+      #   {
+      #     Action = [
+      #       "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
+      #     ]
+      #     Effect   = "Allow"
+      #     Resource = "*"
+      #   },
+      #   {
+      #     Action = [
+      #       "acm:*"
+      #     ]
+      #     Effect   = "Allow"
+      #     Resource = "*"
+      #   },
+      #   {
+      #     Action = [
+      #       "iam:*"
+      #     ]
+      #     Effect   = "Allow"
+      #     Resource = "*"
+      #   }
       {
         Action = [
           "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
@@ -47,14 +68,7 @@ module "valdrin-module" {
       },
       {
         Action = [
-          "acm:*"
-        ]
-        Effect   = "Allow"
-        Resource = "*"
-      },
-      {
-        Action = [
-          "iam:*"
+          "iam:ChangePassword"
         ]
         Effect   = "Allow"
         Resource = "*"
