@@ -10,11 +10,18 @@ module "valdrin-module" {
     Statement = [
       {
         Action = [
-          "ec2:Describe*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
+          "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
         ]
         Effect   = "Allow"
         Resource = "*"
       },
+      #   {
+      #     Action = [
+      #       "ec2:Describe*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
+      #     ]
+      #     Effect   = "Allow"
+      #     Resource = "*"
+      #   },
       {
         Action = [
           "iam:ChangePassword"
