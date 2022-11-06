@@ -10,7 +10,9 @@ module "valdrin-module" {
     Statement = [
       {
         Action = [
-          "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
+          "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers",
+          "route53:*", "route53domains:*", "cloudfront:ListDistributions", "elasticloadbalancing:DescribeLoadBalancers",
+          "elasticbeanstalk:DescribeEnvironments", "cloudwatch:*", "sns*", "", "", "", ""
         ]
         Effect   = "Allow"
         Resource = "*"
@@ -25,6 +27,34 @@ module "valdrin-module" {
       {
         Action = [
           "iam:ChangePassword"
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+      {
+        Action = [
+          "apigateway:GET”"
+        ]
+        Effect   = "Allow"
+        Resource = "arn:aws:apigateway:*::/domainnames"
+      },
+      {
+        Action = [
+          "s3:"
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+      {
+        Action = [
+          "acm:*"
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+      {
+        Action = [
+          "iam:*"
         ]
         Effect   = "Allow"
         Resource = "*"
