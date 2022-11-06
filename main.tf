@@ -33,7 +33,7 @@ module "valdrin-module" {
       #   },
       #   {
       #     Action = [
-      #       "s3:"
+      #       "s3:*"
       #     ]
       #     Effect   = "Allow"
       #     Resource = "*"
