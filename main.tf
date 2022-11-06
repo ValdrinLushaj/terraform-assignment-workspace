@@ -8,57 +8,6 @@ module "valdrin-module" {
   policy_document = {
     Version = "2012-10-17"
     Statement = [
-      #   {
-      #     Action = [
-      #       "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers",
-      #       "route53:*", "route53domains:*", "cloudfront:ListDistributions", "elasticloadbalancing:DescribeLoadBalancers",
-      #       "elasticbeanstalk:DescribeEnvironments", "cloudwatch:*", "sns:*"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   },
-      #   {
-      #     Action = [
-      #       "ec2:Describe*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   },
-      #   {
-      #     Action = [
-      #       "iam:ChangePassword"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   },
-      #   {
-      #     Action = [
-      #       "s3:*"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   },
-      #   {
-      #     Action = [
-      #       "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   },
-      #   {
-      #     Action = [
-      #       "acm:*"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   },
-      #   {
-      #     Action = [
-      #       "iam:*"
-      #     ]
-      #     Effect   = "Allow"
-      #     Resource = "*"
-      #   }
       {
         Action = [
           "ec2:*", "iam:GetAccountPasswordPolicy", "elasticloadbalancing:DescribeLoadBalancers"
